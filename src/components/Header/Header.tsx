@@ -9,17 +9,15 @@ const Header = () => {
 			<div className="container mx-auto flex items-center justify-between px-6 py-3">
 				<Link href={"/"}>
 					<h1
-						className="text-2xl font-semibold"
+						className="text-lg font-semibold md:text-3xl"
 						aria-label="App Name">
-						<span className="font-semibold text-white/90">
-							Nextjs
-						</span>
-						Calculator
+						Nextjs Calculator
 					</h1>
 				</Link>
 
-				<nav className="flex items-center gap-4">
-					<Link href={"/"}>Home</Link>
+				<nav className="flex items-center gap-4 md:gap-6">
+					<Link href={"/"}>Basic</Link>
+					<Link href={"/advanced"}>Advanced</Link>
 
 					<ThemeToggleButton />
 				</nav>

@@ -81,35 +81,37 @@ const BasicCalculator = () => {
 			<Button
 				type="button"
 				onClick={handleAdd}
-				disabled={!Number1 || !Number2}
+				disabled={Number1 === "" || Number2 === ""}
 				className="cursor-pointer">
 				Add
 			</Button>
 			<Button
 				type="button"
 				onClick={handleSubtract}
-				disabled={!Number1 || !Number2}
+				disabled={Number1 === "" || Number2 === ""}
 				className="cursor-pointer">
 				Subtract
 			</Button>
 			<Button
 				type="button"
 				onClick={handleMultiply}
-				disabled={!Number1 || !Number2}
+				disabled={Number1 === "" || Number2 === ""}
 				className="cursor-pointer">
 				Multiply
 			</Button>
 			<Button
 				type="button"
 				onClick={handleDevide}
-				disabled={!Number1 || !Number2}
+				disabled={Number1 === "" || Number2 === ""}
 				className="cursor-pointer">
-				Devide
+				Divide
 			</Button>
 
 			<Button
 				type="button"
+				variant={"destructive"}
 				onClick={handleReset}
+				disabled={(Number1 === "" || Number2 === "") && total === ""}
 				className="col-span-4 cursor-pointer">
 				Reset
 			</Button>
